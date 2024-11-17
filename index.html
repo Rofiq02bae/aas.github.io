@@ -7,74 +7,89 @@
     <style>
         /* Global styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #fff;
-            background: url('https://github.com/Rofiq02bae/aas.github.io/blob/main/background.jpg') no-repeat center center fixed;
+            background: linear-gradient(to bottom, #1c1c1c, #333);
+            background-attachment: fixed;
             background-size: cover;
         }
+
         /* Navbar Styles */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.85);
             padding: 15px;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
         }
         nav ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #f0f0f0;
+            color: #ffd700;
         }
+
         /* Header */
         header {
             text-align: center;
-            padding: 100px 20px;
-            background: rgba(0, 0, 0, 0.5);
-            margin-top: 60px; /* To avoid navbar covering content */
+            padding: 150px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            margin-top: 60px;
         }
         header h1 {
             margin: 0;
-            font-size: 60px;
+            font-size: 50px;
+            color: #ffd700;
         }
         header p {
             font-size: 20px;
+            color: #f0f0f0;
         }
+
         /* Section Styles */
         section {
             padding: 60px 20px;
             text-align: center;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
             background-color: rgba(0, 0, 0, 0.7);
-            margin: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         section h2 {
             font-size: 36px;
             margin-bottom: 20px;
             font-weight: bold;
+            color: #ffd700;
         }
         .about p, .projects p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
+            color: #e0e0e0;
         }
+
+        /* Projects */
         .projects .project {
             margin: 20px 0;
             padding: 20px;
@@ -85,40 +100,63 @@
         .projects .project h3 {
             margin-top: 0;
             font-size: 24px;
+            color: #333;
+        }
+
+        /* Contact Form */
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact form label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffd700;
         }
         .contact input, .contact textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-        }
-        .contact button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
+            box-sizing: border-box;
+            background: #f0f0f0;
+            color: #333;
+            font-size: 16px;
         }
+        .contact button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ffd700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact button:hover {
+            background-color: #ffbf00;
+        }
+
         /* Footer */
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.85);
             color: white;
             text-align: center;
             padding: 20px;
             font-size: 14px;
         }
         footer a {
-            color: #fff;
+            color: #ffd700;
             text-decoration: none;
             font-weight: bold;
         }
         footer a:hover {
-            color: #f0f0f0;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -137,15 +175,13 @@
     <!-- Header -->
     <header>
         <h1>Halo, Selamat Datang</h1>
-        <p>ini adalah web pribadi Saya
-            semoga hari harimu selalu cihuyy :)
-        </p>
+        <p>Ini adalah web pribadi saya. Semoga hari-harimu selalu cihuyy!</p>
     </header>
 
     <!-- About Section -->
     <section id="about">
         <h2>Tentang Saya</h2>
-        <p>Perkenalkan, nama saya As'adurrofiq. Saya seorang pengembang perangkat lunak yang berfokus pada pengembangan web. Saya memiliki pengalaman dalam menggunakan berbagai teknologi seperti HTML, CSS, JavaScript, PHP, dan MySQL. Saya juga tertarik untuk mengeksplorasi berbagai framework dan tools terbaru.</p>
+        <p>Perkenalkan, saya As'adurrofiq. Seorang pengembang perangkat lunak yang berfokus pada pengembangan web dengan teknologi modern.</p>
     </section>
 
     <!-- Projects Section -->
@@ -153,46 +189,53 @@
         <h2>Proyek Saya</h2>
         <div class="project">
             <h3>Proyek 1: Web Baca Huruf Hijaiyyah</h3>
-            <p>Aplikasi untuk membantu pengguna yang belum tau huruf hijaiyyah agar lebih mengenalnya</p>
+            <p>Aplikasi untuk membantu mengenal huruf hijaiyyah lebih mudah.</p>
         </div>
         <div class="project">
-            <h3>Proyek 2: aplikasi sewa kendaraan (RentaRide)</h3>
-            <p>Platform penyewaan berbagai macam kendaraan yang mudah dan efisien dibanding aplikasi serupa</p>
+            <h3>Proyek 2: RentaRide</h3>
+            <p>Platform penyewaan kendaraan yang mudah dan efisien.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Hubungi Saya</h2>
-        <p>Jika Anda tertarik bekerja sama atau ingin berdiskusi, jangan ragu untuk menghubungi saya melalui form berikut:</p>
-        <form id="whatsappForm" onsubmit="sendMessage(); return false;">
-            <label for="message">Pesan:</label><br>
-            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required></textarea><br><br>
-            
-            <button type="submit">Kirim Pesan</button>
+        <p>Jika Anda memiliki pertanyaan atau ingin berdiskusi, kirimkan pesan Anda melalui form ini. Saya akan membalas sesegera mungkin!</p>
+        <form id="contactForm" onsubmit="sendMessage(); return false;" style="max-width: 600px; margin: 0 auto; text-align: left;">
+            <label for="name" style="font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;">Nama Anda:</label>
+            <input id="name" name="name" type="text" placeholder="Masukkan nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+    
+            <label for="message" style="font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;">Pesan Anda:</label>
+            <textarea id="message" name="message" placeholder="Tulis pesan Anda..." required style="width: 100%; padding: 10px; height: 100px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;"></textarea>
+    
+            <button type="submit" style="width: 100%; padding: 15px; background-color: #ffd700; color: #333; font-size: 16px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Kirim via WhatsApp</button>
         </form>
     </section>
-
-    <!-- Address Section -->
-    <section id="address">
-        <h2>Alamat</h2>
-        <p>Domisili saya saat ini berada di PP Nurul Hidayah Puluhdadi, Seturan, Kab. Sleman, provinsi Yogyakarta</p>
-    </section>
+    
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 aas_anak_baik. Semua hak cipta dilindungi.</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> | <a href="https://github.com/your-username" target="_blank">GitHub</a></p>
     </footer>
+
     <script>
         function sendMessage() {
-            const phone = "6287863535272";
-            const message = document.getElementById('message').value;
-            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-            // Redirect to WhatsApp
+            const name = document.getElementById('name').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            if (!name || !message) {
+                alert("Harap isi nama dan pesan sebelum mengirim.");
+                return;
+            }
+    
+            const phone = "6287863535272"; // Nomor WhatsApp tujuan
+            const fullMessage = `Halo, saya ${name}. %0A%0A${message}`;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
+    
+            // Buka WhatsApp di tab baru
             window.open(url, '_blank');
         }
     </script>
+    
 </body>
 </html>
