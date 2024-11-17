@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            z-index: 1000;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav ul li a:hover {
+            color: #f0f0f0;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 60px; /* To avoid navbar covering content */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 60px;
+        }
+        header p {
+            font-size: 20px;
+        }
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .about p, .projects p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .projects .project {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .projects .project h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        .contact button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Proyek Saya</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#address">Alamat</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Halo, Selamat Datang</h1>
+        <p>ini adalah web pribadi Saya
+            semoga hari harimu selalu cihuyy :)
+        </p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Perkenalkan, nama saya As'adurrofiq. Saya seorang pengembang perangkat lunak yang berfokus pada pengembangan web. Saya memiliki pengalaman dalam menggunakan berbagai teknologi seperti HTML, CSS, JavaScript, PHP, dan MySQL. Saya juga tertarik untuk mengeksplorasi berbagai framework dan tools terbaru.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Proyek Saya</h2>
+        <div class="project">
+            <h3>Proyek 1: Web Baca Huruf Hijaiyyah</h3>
+            <p>Aplikasi untuk membantu pengguna yang belum tau huruf hijaiyyah agar lebih mengenalnya</p>
+        </div>
+        <div class="project">
+            <h3>Proyek 2: aplikasi sewa kendaraan (RentaRide)</h3>
+            <p>Platform penyewaan berbagai macam kendaraan yang mudah dan efisien dibanding aplikasi serupa</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <p>Jika Anda tertarik bekerja sama atau ingin berdiskusi, jangan ragu untuk menghubungi saya melalui form berikut:</p>
+        <form id="whatsappForm" onsubmit="sendMessage(); return false;">
+            <label for="message">Pesan:</label><br>
+            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required></textarea><br><br>
+            
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <!-- Address Section -->
+    <section id="address">
+        <h2>Alamat</h2>
+        <p>Domisili saya saat ini berada di PP Nurul Hidayah Puluhdadi, Seturan, Kab. Sleman, provinsi Yogyakarta</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 aas_anak_baik. Semua hak cipta dilindungi.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> | <a href="https://github.com/your-username" target="_blank">GitHub</a></p>
+    </footer>
+    <script>
+        function sendMessage() {
+            const phone = "6287863535272";
+            const message = document.getElementById('message').value;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
